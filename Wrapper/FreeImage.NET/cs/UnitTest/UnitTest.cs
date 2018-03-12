@@ -26,13 +26,13 @@ namespace FreeImageNETUnitTest
 		FIBITMAP dib;
 		string freeImageCallback = null;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void Init()
 		{
 			FreeImageEngine.Message += new OutputMessageFunction(FreeImage_Message);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void DeInit()
 		{
 			FreeImageEngine.Message -= new OutputMessageFunction(FreeImage_Message);
@@ -1480,7 +1480,7 @@ namespace FreeImageNETUnitTest
 			FreeImage.UnloadEx(ref dib);
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void FreeImage_ApplyColorMapping()
 		{
 			dib = iManager.GetBitmap(ImageType.Even, ImageColorType.Type_32);
@@ -1604,13 +1604,13 @@ namespace FreeImageNETUnitTest
 		FIBITMAP dib = new FIBITMAP();
 		string freeImageCallback = null;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void Init()
 		{
 			FreeImageEngine.Message += new OutputMessageFunction(FreeImage_Message);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void DeInit()
 		{
 			FreeImageEngine.Message -= new OutputMessageFunction(FreeImage_Message);
@@ -1874,7 +1874,7 @@ namespace FreeImageNETUnitTest
 			Assert.That(EqualColors(Color.DarkGoldenrod, color));
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void FICOMPLEX()
 		{
 		}
@@ -1963,13 +1963,13 @@ namespace FreeImageNETUnitTest
 		FIBITMAP dib = new FIBITMAP();
 		string freeImageCallback = null;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void Init()
 		{
 			FreeImageEngine.Message += new OutputMessageFunction(FreeImage_Message);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void DeInit()
 		{
 			FreeImageEngine.Message -= new OutputMessageFunction(FreeImage_Message);
@@ -2193,7 +2193,7 @@ namespace FreeImageNETUnitTest
 			Assert.That(rational1 == 0);
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void StreamWrapper()
 		{
 			string url = @"http://freeimage.sourceforge.net/images/logo.jpg";
@@ -2333,7 +2333,7 @@ namespace FreeImageNETUnitTest
 			stream.Dispose();
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void LocalPlugin()
 		{
 		}
@@ -3164,13 +3164,13 @@ namespace FreeImageNETUnitTest
 		FIBITMAP dib = new FIBITMAP();
 		string freeImageCallback = null;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void Init()
 		{
 			FreeImageEngine.Message += new OutputMessageFunction(FreeImage_Message);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void DeInit()
 		{
 			FreeImageEngine.Message -= new OutputMessageFunction(FreeImage_Message);
@@ -4731,13 +4731,13 @@ namespace FreeImageNETUnitTest
 		FIBITMAP dib = new FIBITMAP();
 		string freeImageCallback = null;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void Init()
 		{
 			FreeImageEngine.Message += new OutputMessageFunction(FreeImage_Message);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeTearDown]
 		public void DeInit()
 		{
 			FreeImageEngine.Message -= new OutputMessageFunction(FreeImage_Message);
@@ -5216,12 +5216,12 @@ namespace FreeImageNETUnitTest
 			fib.Dispose();
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void LockBits()
 		{
 		}
 
-		[Ignore]
+		[Ignore("???")]
 		public void UnlockBits()
 		{
 		}
@@ -5497,12 +5497,12 @@ namespace FreeImageNETUnitTest
 						methodList.Add(info);
 						break;
 					}
-					else if (attribute.GetType() == typeof(TestFixtureSetUpAttribute))
+					else if (attribute.GetType() == typeof(OneTimeSetUpAttribute))
 					{
 						classSetUp = info;
 						break;
 					}
-					else if (attribute.GetType() == typeof(TestFixtureTearDownAttribute))
+					else if (attribute.GetType() == typeof(OneTimeTearDownAttribute))
 					{
 						classTearDown = info;
 						break;
