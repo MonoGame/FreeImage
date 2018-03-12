@@ -3,6 +3,8 @@
 *.sdf
 *.suo
 *.vcxproj.user
+*.csproj.user
+packages
 Release
 Debug
 [Dd]ist
