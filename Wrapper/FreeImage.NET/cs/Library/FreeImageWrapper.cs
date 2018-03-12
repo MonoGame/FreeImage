@@ -241,11 +241,11 @@ namespace FreeImageAPI
 		/// <param name="palette">The palette of the bitmap or <c>null</c>.</param>
 		/// <returns>Handle to a FreeImage bitmap.</returns>
 		/// <remarks>
-		/// This function is an extension to <see cref="Allocate"/>, which additionally supports
+		/// This function is an extension to <see cref="Allocate(int,int,int)"/>, which additionally supports
 		/// specifying a palette to be set for the newly create image, as well as specifying a
 		/// background color, the newly created image should initially be filled with.
 		/// <para/>
-		/// Basically, this function internally relies on function <see cref="Allocate"/>, followed by a
+		/// Basically, this function internally relies on function <see cref="Allocate(int,int,int)"/>, followed by a
 		/// call to <see cref="FillBackground&lt;T&gt;"/>. This is why both parameters
 		/// <paramref name="color"/> and <paramref name="options"/> behave the same as it is
 		/// documented for function <see cref="FillBackground&lt;T&gt;"/>.
@@ -273,7 +273,7 @@ namespace FreeImageAPI
 		/// specified by the background color's <see cref="RGBQUAD.rgbReserved"/> field.
 		/// The image is then filled with this palette index.
 		/// <para/>
-		/// This function returns a newly created image as function <see cref="Allocate"/> does, if both
+		/// This function returns a newly created image as function <see cref="Allocate(int,int,int)"/> does, if both
 		/// parameters <paramref name="color"/> and <paramref name="palette"/> are <c>null</c>.
 		/// If only <paramref name="color"/> is <c>null</c>, the palette pointed to by
 		/// parameter <paramref name="palette"/> is initially set for the new image, if a palletized
@@ -307,11 +307,11 @@ namespace FreeImageAPI
 		/// eg: 0x0000FF</param>
 		/// <returns>Handle to a FreeImage bitmap.</returns>
 		/// <remarks>
-		/// This function is an extension to <see cref="Allocate"/>, which additionally supports
+		/// This function is an extension to <see cref="Allocate(int,int,int)"/>, which additionally supports
 		/// specifying a palette to be set for the newly create image, as well as specifying a
 		/// background color, the newly created image should initially be filled with.
 		/// <para/>
-		/// Basically, this function internally relies on function <see cref="Allocate"/>, followed by a
+		/// Basically, this function internally relies on function <see cref="Allocate(int,int,int)"/>, followed by a
 		/// call to <see cref="FillBackground&lt;T&gt;"/>. This is why both parameters
 		/// <paramref name="color"/> and <paramref name="options"/> behave the same as it is
 		/// documented for function <see cref="FillBackground&lt;T&gt;"/>.
@@ -339,7 +339,7 @@ namespace FreeImageAPI
 		/// specified by the background color's <see cref="RGBQUAD.rgbReserved"/> field.
 		/// The image is then filled with this palette index.
 		/// <para/>
-		/// This function returns a newly created image as function <see cref="Allocate"/> does, if both
+		/// This function returns a newly created image as function <see cref="Allocate(int,int,int)"/> does, if both
 		/// parameters <paramref name="color"/> and <paramref name="palette"/> are <c>null</c>.
 		/// If only <paramref name="color"/> is <c>null</c>, the palette pointed to by
 		/// parameter <paramref name="palette"/> is initially set for the new image, if a palletized
@@ -393,11 +393,11 @@ namespace FreeImageAPI
 		/// <param name="palette">The palette of the bitmap or <c>null</c>.</param>
 		/// <returns>Handle to a FreeImage bitmap.</returns>
 		/// <remarks>
-		/// This function is an extension to <see cref="AllocateT"/>, which additionally supports
+		/// This function is an extension to <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/>, which additionally supports
 		/// specifying a palette to be set for the newly create image, as well as specifying a
 		/// background color, the newly created image should initially be filled with.
 		/// <para/>
-		/// Basically, this function internally relies on function <see cref="AllocateT"/>, followed by a
+		/// Basically, this function internally relies on function <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/>, followed by a
 		/// call to <see cref="FillBackground&lt;T&gt;"/>. This is why both parameters 
 		/// <paramref name="color"/> and <paramref name="options"/> behave the same as it is
 		/// documented for function <see cref="FillBackground&lt;T&gt;"/>. So, please refer to the
@@ -427,7 +427,7 @@ namespace FreeImageAPI
 		/// background color's <see cref="RGBQUAD.rgbReserved"/> field. The image is then filled with
 		/// this palette index.
 		/// <para/>
-		/// This function returns a newly created image as function <see cref="AllocateT"/> does, if both
+		/// This function returns a newly created image as function <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/> does, if both
 		/// parameters <paramref name="color"/> and <paramref name="palette"/> are <c>null</c>.
 		/// If only <paramref name="color"/> is <c>null</c>, the palette pointed to by
 		/// parameter <paramref name="palette"/> is initially set for the new image, if a palletized
@@ -463,11 +463,11 @@ namespace FreeImageAPI
 		/// eg: 0x0000FF</param>
 		/// <returns>Handle to a FreeImage bitmap.</returns>
 		/// <remarks>
-		/// This function is an extension to <see cref="AllocateT"/>, which additionally supports
+		/// This function is an extension to <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/>, which additionally supports
 		/// specifying a palette to be set for the newly create image, as well as specifying a
 		/// background color, the newly created image should initially be filled with.
 		/// <para/>
-		/// Basically, this function internally relies on function <see cref="AllocateT"/>, followed by a
+		/// Basically, this function internally relies on function <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/>, followed by a
 		/// call to <see cref="FillBackground&lt;T&gt;"/>. This is why both parameters 
 		/// <paramref name="color"/> and <paramref name="options"/> behave the same as it is
 		/// documented for function <see cref="FillBackground&lt;T&gt;"/>. So, please refer to the
@@ -497,7 +497,7 @@ namespace FreeImageAPI
 		/// background color's <see cref="RGBQUAD.rgbReserved"/> field. The image is then filled with
 		/// this palette index.
 		/// <para/>
-		/// This function returns a newly created image as function <see cref="AllocateT"/> does, if both
+		/// This function returns a newly created image as function <see cref="AllocateT(FREE_IMAGE_TYPE,int,int,int)"/> does, if both
 		/// parameters <paramref name="color"/> and <paramref name="palette"/> are <c>null</c>.
 		/// If only <paramref name="color"/> is <c>null</c>, the palette pointed to by
 		/// parameter <paramref name="palette"/> is initially set for the new image, if a palletized
