@@ -1,0 +1,10 @@
+# NOTE: We use TeamCity for official builds.
+language: csharp
+os:
+- osx
+- linux
+compiler:
+- clang
+- gcc
+script:
+- make
