@@ -1,0 +1,9 @@
+.vs
+*.opensdf
+*.sdf
+*.suo
+*.vcxproj.user
+Release
+Debug
+[Dd]ist
+
