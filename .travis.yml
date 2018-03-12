@@ -10,5 +10,5 @@ script:
 - ls /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
 - make
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then mv libfreeimage-3.17.0.dylib libfreeimage.dylib ; fi
-- nuget restore Wrapper/FreeImage.NET/cs/FreeImage.NET.sln -PackageDirectory Wrapper/FreeImage.NET/cs/ 
+- nuget restore Wrapper/FreeImage.NET/cs/FreeImage.NET.sln 
 - msbuild Wrapper/FreeImage.NET/cs/FreeImage.NET.sln /p:Configuration=Release
