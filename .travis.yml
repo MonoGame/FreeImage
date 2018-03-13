@@ -1,0 +1,13 @@
+# NOTE: We use TeamCity for official builds.
+language: csharp
+os:
+- osx
+- linux
+compiler:
+- clang
+- gcc
+script:
+- make
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then mv libfreeimage-3.17.0.dylib libfreeimage.dylib ; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then nuget restore Wrapper/FreeImage.NET/cs/FreeImage.NET.sln ; fi 
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then msbuild Wrapper/FreeImage.NET/cs/FreeImage.NET.sln /p:Configuration=Release ; fi
